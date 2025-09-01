@@ -1,0 +1,66 @@
+.detail-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #0d0d0d; /* Terminal black */
+    color: #33ff33; /* Green terminal text */
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,255,0,0.2);
+    line-height: 1.6;
+}
+
+.detail-container h1 {
+    color: #33ff33;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.detail-container p {
+    margin: 10px 0;
+}
+
+.detail-container .label {
+    color: #00ff00; /* brighter green for labels */
+    font-weight: bold;
+}
+
+.detail-container .value {
+    color: #33ff33;
+}
+
+.detail-container button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #00ff00;
+    color: #0d0d0d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.detail-container button:hover {
+    background-color: #33ff33;
+}
+
+.blinking-cursor::after {
+    content: "_";
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+.log-container {
+    background-color: #000;
+    color: #0f0;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 5px;
+    height: 150px;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 0 10px rgba(0,255,0,0.3);
+}
