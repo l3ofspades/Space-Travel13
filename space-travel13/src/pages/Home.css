@@ -5,6 +5,13 @@
     text-align: center;
     color: #f0f0f0;
     font-family: 'Arial', sans-serif;
+
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh; 
 }
 
 .home-container h1 {
@@ -19,6 +26,14 @@
     margin-bottom: 40px;
     line-height: 1.6;
     color: #0770e7;
+}
+
+/* NEW: Button wrapper just for the homepage buttons */
+.home-buttons {
+    display: flex;
+    gap: 20px;              /* space between the two buttons */
+    justify-content: center;
+    flex-wrap: wrap;        /* makes them stack on small screens */
 }
 
 .home-container a.button {

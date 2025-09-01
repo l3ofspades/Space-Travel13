@@ -21,7 +21,8 @@ export default function SpacecraftDetail() {
   return (
     <div className="detail-container">
       <h1>{spacecraft.name} <span className="blinking-cursor"></span></h1>
-      <p><strong>Current Location:</strong> {spacecraft.location}</p> 
+      <p><strong>Current Location:</strong> {spacecraft.location || "Unknown"}</p>
+
 
       <div className="log-container">
         <h3>Activity Log</h3>
