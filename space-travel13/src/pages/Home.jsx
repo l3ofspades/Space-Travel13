@@ -1,20 +1,18 @@
 import { Link } from "react-router-dom";
-import './Home.css';
+import "./Home.css";
 
 export default function Home() {
-    return (
-        <div className="page-container home-container">
-            <h1>🌌 Space Travel</h1>
-            <p>
-                Welcome, Commander! Your mission is to evacuate humanity from Earth
-                and manage our spacecraft fleet to reach new planets. Prepare for interstellar challenges ahead.
-         </p>
-            <Link to="/spacecrafts" className="button">
-                View Spacecrafts
-            </Link>
-            <Link to="/planets" className="button" style={{ marginLeft: '10px' }}>
-                Explore Planets
-            </Link>
+  return (
+    <div className="home-container">
+      <div className="home-box">
+        <h1>🚀 Space Command Center</h1>
+        <p>Welcome Commander! Manage your planets and spacecrafts below:</p>
+
+        <div className="button-group">
+          <Link to="/planets" className="home-button">🌍 Manage Planets</Link>
+          <Link to="/spacecrafts" className="home-button">🛸 Manage Spacecrafts</Link>
         </div>
-    );
+      </div>
+    </div>
+  );
 }

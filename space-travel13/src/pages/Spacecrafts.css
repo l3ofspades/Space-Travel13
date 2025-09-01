@@ -1,40 +1,52 @@
+.spacecrafts-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: #111;
+  padding: 40px 0;
+}
+
+.spacecrafts-box {
+  background: #000;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+}
+
 .page-title {
-  color: #33ff33; /* green text */
-  font-family: 'Courier New', monospace; /* terminal style */
-  font-size: 2.5rem; /* optional */
-  text-shadow: 0 0 5px #00ff00; /* optional glowing effect */
+  color: #ff6f61;
+  margin-bottom: 20px;
 }
 
-.create-form {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+.add-spacecraft-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
 }
 
-.create-form input,
-.create-form select {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #33ff33;
-    background-color: #0d0d0d;
-    color: #33ff33;
-    font-family: 'Courier New', monospace;
+.add-spacecraft-form input,
+.add-spacecraft-form select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-.create-form input::placeholder {
-    color: #33ff33;
+.add-spacecraft-form button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #ff6f61;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.create-form button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #33ff33;
-    color: #0d0d0d;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.create-form button:hover {
-    background-color: #00ff00;
+.add-spacecraft-form button:hover {
+  background: #ff3b2f;
 }
