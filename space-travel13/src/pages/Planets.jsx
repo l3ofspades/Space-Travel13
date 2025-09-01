@@ -2,15 +2,11 @@ import { useContext } from "react";
 import { SpacecraftContext } from "../context/SpacecraftContext";
 import './Planets.css';
 
-const Planets = () => {
-  const { spacecrafts, dispatchSpacecraft } = useContext(SpacecraftContext);
+export default function Planets() {
+  const { spacecrafts, moveSpacecraft } = useContext(SpacecraftContext);
 
-  // Get unique planet locations from spacecrafts
-  const planets = [...new Set(spacecrafts.map(sc => sc.location))];
-
-  const handleDispatch = (scId, planet) => {
-    dispatchSpacecraft(scId, planet);
-  };
+  // Get unique planet names
+  const planets = [...new Set(spacecrafts.map(sc => sc.planet))];
 
   return (
     <div className="planets-container">
@@ -20,14 +16,14 @@ const Planets = () => {
           <h3>{planet}</h3>
           <ul>
             {spacecrafts
-              .filter(sc => sc.location === planet)
+              .filter(sc => sc.planet === planet)
               .map(sc => (
                 <li key={sc.id} className="spacecraft-item">
                   <span>{sc.name}</span>
                   <div className="actions">
-                    <button onClick={() => handleDispatch(sc.id, "Earth")}>Send to Earth</button>
-                    <button onClick={() => handleDispatch(sc.id, "Mars")}>Send to Mars</button>
-                    <button onClick={() => handleDispatch(sc.id, "Jupiter")}>Send to Jupiter</button>
+                    <button onClick={() => moveSpacecraft(sc.id, "Earth")}>Send to Earth</button>
+                    <button onClick={() => moveSpacecraft(sc.id, "Mars")}>Send to Mars</button>
+                    <button onClick={() => moveSpacecraft(sc.id, "Jupiter")}>Send to Jupiter</button>
                   </div>
                 </li>
               ))}
@@ -36,6 +32,4 @@ const Planets = () => {
       ))}
     </div>
   );
-};
-
-export default Planets;
+}
