@@ -1,4 +1,4 @@
-import '../Tests/setupTests';
+
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { SpacecraftProvider } from '../context/SpacecraftContext';
