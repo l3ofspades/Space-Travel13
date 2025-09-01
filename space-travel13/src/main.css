@@ -1,0 +1,19 @@
+/* src/index.css or src/main.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle at top, #0d0d2b, #1a1a40, #000000);
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+/* Optional: give all page containers a little transparency for cosmic effect */
+.page-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
