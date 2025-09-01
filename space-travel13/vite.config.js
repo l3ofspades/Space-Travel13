@@ -1,7 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vitest/config';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  test: {
+    environment: 'jsdom', // ← this is the key
+    globals: true,         // optional but convenient for things like "describe" and "it"
+    setupFiles: './src/Tests/setupTests.js', // optional, for any setup
+  },
+});
